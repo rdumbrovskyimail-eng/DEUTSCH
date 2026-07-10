@@ -9,23 +9,15 @@ plugins {
 }
 
 android {
-    namespace = "com.learnde.app"
+    namespace = "com.deutsch.app"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.learnde.app"
+        applicationId = "com.deutsch.app"
         minSdk = 26
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
-        buildConfigField(
-            "String",
-            "GEMINI_API_KEY",
-            "\"${project.findProperty("GEMINI_API_KEY") ?: ""}\""
-        )
-
-        // Оставляем только нужные локали — ускоряет packaging
-        androidResources.localeFilters += listOf("ru", "de", "en")
     }
 
     buildFeatures {
@@ -76,8 +68,6 @@ android {
                 "META-INF/AL2.0",
                 "META-INF/LGPL2.1",
             )
-            pickFirsts += setOf(
-            )
         }
     }
 }
@@ -87,13 +77,6 @@ dependencies {
     // Core
     implementation("androidx.core:core-ktx:1.18.0")
     implementation("androidx.activity:activity-ktx:1.13.0")
-    // CameraX
-    implementation("androidx.camera:camera-core:1.4.1")
-    implementation("androidx.camera:camera-camera2:1.4.1")
-    implementation("androidx.camera:camera-lifecycle:1.4.1")
-    implementation("androidx.camera:camera-view:1.4.1")
-    implementation("androidx.documentfile:documentfile:1.0.1")
-    implementation("com.google.android.material:material:1.13.0")
 
     // Compose BOM
     val composeBom = platform("androidx.compose:compose-bom:2026.03.01")
@@ -115,7 +98,6 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.10.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.10.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.10.0")
-    implementation("androidx.lifecycle:lifecycle-service:2.10.0")
 
     // Navigation
     implementation("androidx.navigation:navigation-compose:2.9.7")

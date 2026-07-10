@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="surface_dark">#FFF6F1E4</color>
+    <color name="surface_elevated">#FFE8DFC9</color>
+    <color name="surface_controls">#FFEFE8D6</color>
+    <color name="text_primary">#FF3A3423</color>
+    <color name="text_secondary">#FF6B6350</color>
+    <color name="text_tertiary">#FF9B9077</color>
+    <color name="text_log">#FF6B6350</color>
+    <color name="accent_blue">#FF7D5A24</color>
+    <color name="accent_blue_dim">#337D5A24</color>
+    <color name="status_red">#FFA3452C</color>
+    <color name="status_yellow">#FFB98A2E</color>
+    <color name="status_green">#FF4F6B33</color>
+    <color name="status_recording">#FF4F6B33</color>
+    <color name="button_start">#FF4F6B33</color>
+    <color name="button_start_disabled">#334F6B33</color>
+    <color name="button_stop_stroke">#443A3423</color>
+    <color name="divider_dark">#1F3A3423</color>
+    <color name="input_stroke_color">#333A3423</color>
+    <color name="ripple_subtle">#143A3423</color>
+</resources>

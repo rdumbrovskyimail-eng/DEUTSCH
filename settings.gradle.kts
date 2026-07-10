@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "VOICE"
+rootProject.name = "deutsch"
 include(":app")

@@ -116,7 +116,7 @@ fun AnalyzerScreen(
                     modifier = Modifier
                         .fillMaxSize()
                         .verticalScroll(scrollState),
-                    color = Color(0xFF3A3423), // text_primary из твоей темы
+                    color = colorResource(id = R.color.text_primary),
                     fontSize = 16.sp
                 )
             }

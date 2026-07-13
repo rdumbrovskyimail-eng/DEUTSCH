@@ -120,4 +120,10 @@ dependencies {
     // Logging
     implementation("com.jakewharton.timber:timber:5.0.1")
 
+    // Markdown для красивого отчета
+    implementation("com.github.jeziellago:compose-markdown:0.5.2")
+
+    // Вспомогательное для Hilt
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+
 }

@@ -18,6 +18,17 @@ android {
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
+
+        // Читаем ключ из local.properties (для локальной сборки) или из ENV (для GitHub Actions)
+        val localProperties = java.util.Properties()
+        val localPropertiesFile = rootProject.file("local.properties")
+        if (localPropertiesFile.exists()) {
+            localProperties.load(java.io.FileInputStream(localPropertiesFile))
+        }
+        val apiKey = System.getenv("GEMINI_API_KEY") ?: localProperties.getProperty("GEMINI_API_KEY") ?: "MISSING_API_KEY"
+        
+        // Генерируем поле в BuildConfig
+        buildConfigField("String", "GEMINI_API_KEY", "\"$apiKey\"")
     }
 
     buildFeatures {

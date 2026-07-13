@@ -1,5 +1,7 @@
 package com.deutsch.app.data
 
+import android.content.Context
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -17,30 +19,19 @@ import javax.inject.Singleton
 
 @Singleton
 class GeminiRepository @Inject constructor(
-    private val client: OkHttpClient
+    private val client: OkHttpClient,
+    @ApplicationContext private val context: Context // Контекст для доступа к assets
 ) {
-    // TODO: В будущем мы заменим этот блок на твою полную базу данных правил A1-B2
-    private var grammarRulesA1B2 = "База правил загружается..."
+    // Лениво читаем базу грамматики один раз при первом обращении
+    private val grammarRulesA1B2: String by lazy {
+        try {
+            context.assets.open("grammar_rules.md").bufferedReader().use { it.readText() }
+        } catch (e: Exception) {
+            Timber.e(e, "Ошибка чтения базы грамматики")
+            "База грамматики недоступна."
+        }
+    }
 
-    private val systemPrompt = """
-        Ты — высококлассный, мгновенный анализатор грамматики немецкого языка (уровни A1-B2).
-        Твоя задача — анализировать введенный пользователем текст в реальном времени.
-        
-        СТРУКТУРА ОТЧЕТА:
-        1. ✅ **Соблюденные правила** (что сделано хорошо).
-        2. ❌ **Ошибки и исправления** (с указанием конкретного правила).
-        3. 💡 **Пояснения и нюансы** (тонкости, синонимы или советы).
-        
-        СПЕЦИАЛЬНОЕ УСЛОВИЕ:
-        Пользователь вводит текст в реальном времени. Если он ввел только одну букву (например, "I" или "W"), не пиши об ошибке. Выдай полезные слова на эту букву для уровня A1-A2 или правила чтения этой буквы в немецком. Будь максимально полезен на каждом этапе ввода!
-        
-        Используй строгий и красивый Markdown.
-        
-        [БАЗА ЗНАНИЙ ГРАММАТИКИ ДЛЯ АНАЛИЗА (ВРЕМЕННАЯ)]
-        $grammarRulesA1B2
-    """.trimIndent()
-
-    // Используем потоковый Endpoint для мгновенного появления текста
     fun analyzeTextStream(inputText: String, apiKey: String): Flow<String> = flow {
         if (inputText.isBlank()) {
             emit("Начните вводить текст на немецком...")
@@ -51,7 +42,7 @@ class GeminiRepository @Inject constructor(
 
         val jsonBody = JSONObject().apply {
             put("systemInstruction", JSONObject().apply {
-                put("parts", JSONArray().put(JSONObject().apply { put("text", systemPrompt) }))
+                put("parts", JSONArray().put(JSONObject().apply { put("text", grammarRulesA1B2) }))
             })
             put("contents", JSONArray().put(JSONObject().apply {
                 put("role", "user")
@@ -89,22 +80,17 @@ class GeminiRepository @Inject constructor(
                                     .getJSONArray("parts")
                                 val textChunk = parts.getJSONObject(0).getString("text")
                                 fullResponse += textChunk
-                                emit(fullResponse) // Отправляем кусок текста в UI мгновенно
+                                emit(fullResponse) // Мгновенно отправляем кусок текста в UI
                             }
                         } catch (e: Exception) {
-                            Timber.e(e, "Error parsing JSON chunk")
+                            Timber.e(e, "Ошибка парсинга JSON")
                         }
                     }
                 }
             }
         } catch (e: IOException) {
-            Timber.e(e, "Network error")
+            Timber.e(e, "Ошибка сети")
             emit("⚠️ Ошибка сети. Проверьте подключение.")
         }
     }.flowOn(Dispatchers.IO)
-    
-    // Метод для будущей загрузки твоей базы
-    fun updateGrammarDatabase(newRules: String) {
-        this.grammarRulesA1B2 = newRules
-    }
 }

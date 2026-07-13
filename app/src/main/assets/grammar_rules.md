@@ -10,8 +10,6 @@
    - 💡 Дай совет из раздела "45. ТИПОВІ ПОМИЛКИ" или объясни нюанс.
 3. Отвечай на языке базы (русский/украинский). Будь кратким, структурированным и используй Markdown.
 </system_instructions>
-
-<grammar_database>
 # 👑 АБСОЛЮТНИЙ ДОВІДНИК З НІМЕЦЬКОЇ ГРАМАТИКИ (A1–B2)
 ### Порядок: від найважливішого до найменш важливого
 ### Мова пояснень: русский · Терміни: українська
@@ -20,7 +18,7 @@
 
 # ═══════════════════════════════════════
 # 🔴 РІВЕНЬ A1 — ФУНДАМЕНТ
-### Без этого нельзя открыть рот
+### Без цього нельзя открыть рот
 # ═══════════════════════════════════════
 
 ---
@@ -180,9 +178,11 @@ an+dem = **am** · in+dem = **im** · von+dem = **vom** · zu+dem = **zum** · z
 
 Якщо присудок складається з двох частин — змінювана на 2-му місці, незмінювана **в кінець**. Між ними — все інше:
 
-Ich [habe] das Buch gestern Abend [gelesen]. Er [muss] heute unbedingt zum Arzt
-[gehen]. Ich [stehe] jeden Tag um 7 Uhr [auf].
-
+```
+Ich  [habe]  das Buch gestern Abend  [gelesen].
+Er   [muss]  heute unbedingt zum Arzt [gehen].
+Ich  [stehe] jeden Tag um 7 Uhr       [auf].
+```
 
 ---
 
@@ -206,9 +206,11 @@ Ich [habe] das Buch gestern Abend [gelesen]. Er [muss] heute unbedingt zum Arzt
 
 Після підрядного сполучника дієслово летить у **кінець**:
 
-..., weil er krank ist. (одне дієслово) ..., weil er krank sein muss. (модальне
-— в самому кінці) ..., weil er das Buch gelesen hat. (haben — в кінці)
-
+```
+..., weil er krank ist.             (одне дієслово)
+..., weil er krank sein muss.       (модальне — в самому кінці)
+..., weil er das Buch gelesen hat.  (haben — в кінці)
+```
 
 ---
 
@@ -419,9 +421,10 @@ helfen · danken · gehören · gefallen · folgen · antworten · glauben (ос
 - **Wo?** (де?) → **Dativ** (статика)
 - **Wohin?** (куди?) → **Akkusativ** (рух)
 
-Wo? (Dat): Das Buch liegt auf dem Tisch. Wohin? (Akk): Ich lege das Buch auf den
-Tisch.
-
+```
+Wo? (Dat):    Das Buch liegt auf dem  Tisch.
+Wohin? (Akk): Ich lege das Buch auf den Tisch.
+```
 
 ---
 
@@ -570,4 +573,1200 @@ die Leute · die Eltern · die Geschwister · die Ferien · die Kosten
 
 В усному мовленні Präteritum **тільки** для: sein, haben, werden, модальних дієслів.
 
-*
+*"Ich ging ins Kino"* в розмові — звучить як Шекспір. Треба: *"Ich bin ins Kino gegangen".* Але: *"Ich war im Kino"* — абсолютно нормально.
+
+| Особа | machen | sein | haben | werden |
+|---|---|---|---|---|
+| ich | mach**te** | **war** | **hatte** | wurde |
+| du | mach**test** | warst | hattest | wurdest |
+| er/sie/es | mach**te** | **war** | **hatte** | wurde |
+| wir | mach**ten** | waren | hatten | wurden |
+| ihr | mach**tet** | wart | hattet | wurdet |
+| sie/Sie | mach**ten** | waren | hatten | wurden |
+
+**Модальні в Präteritum** (умлаут зникає!):
+müssen → **musste** · können → **konnte** · wollen → **wollte** · dürfen → **durfte** · sollen → **sollte** · mögen → **mochte**
+
+---
+
+# ═══════════════════════════════════════
+# 🟡 РІВЕНЬ B1 — УСКЛАДНЕННЯ
+# ═══════════════════════════════════════
+
+---
+
+# 16. ПРИКМЕТНИК — ВІДМІНЮВАННЯ (Adjektivdeklination)
+
+### Головне правило — МЕТАФОРА ПРАПОРА
+
+У групі **Артикль + Прикметник + Іменник** хтось ОДИН повинен нести «прапор» — закінчення, яке чітко показує рід і відмінок. Німецька мова економна — вона не любить вішати прапор на кожне слово.
+
+---
+
+### Слабка відміна — після der/die/das, dieser, jeder, welcher
+
+Артикль вже несе прапор → прикметник «розслабляється».
+**-е** ставиться у 5 позиціях: Nom (всі 3 роди) + Akk (жін. і сер.).
+**-en** — в усіх інших.
+
+| | чол. | жін. | сер. | множина |
+|---|---|---|---|---|
+| Nom | der gut**e** Mann | die gut**e** Frau | das gut**e** Kind | die gut**en** |
+| Gen | des gut**en** | der gut**en** | des gut**en** | der gut**en** |
+| Dat | dem gut**en** | der gut**en** | dem gut**en** | den gut**en** |
+| Akk | den gut**en** | die gut**e** | das gut**e** | die gut**en** |
+
+---
+
+### Мішана відміна — після ein, kein, mein, dein, sein...
+
+*ein* у чол. Nom і сер. Nom/Akk — **голий** (без закінчення). Прикметник **бере прапор на себе**. Щойно артикль отримує закінчення — прикметник знову бере -en.
+
+| | чол. | жін. | сер. | множина (kein) |
+|---|---|---|---|---|
+| Nom | ein gut**er** Mann ⚑ | eine gut**e** Frau | ein gut**es** Kind ⚑ | keine gut**en** |
+| Gen | eines gut**en** | einer gut**en** | eines gut**en** | keiner gut**en** |
+| Dat | einem gut**en** | einer gut**en** | einem gut**en** | keinen gut**en** |
+| Akk | einen gut**en** | eine gut**e** | ein gut**es** ⚑ | keine gut**en** |
+
+⚑ — позиції де прикметник несе прапор.
+
+---
+
+### Сильна відміна — без артикля
+
+Прикметник сам несе прапор → бере закінчення визначеного артикля.
+
+| | чол. | жін. | сер. | множина |
+|---|---|---|---|---|
+| Nom | gut**er** Wein | frisch**e** Milch | kalt**es** Wasser | gut**e** Weine |
+| Gen | gut**en** Weins* | frisch**er** Milch | kalt**en** Wassers* | gut**er** Weine |
+| Dat | gut**em** Wein | frisch**er** Milch | kalt**em** Wasser | gut**en** Weinen |
+| Akk | gut**en** Wein | frisch**e** Milch | kalt**es** Wasser | gut**e** Weine |
+
+*Gen чол./сер. → **-en** (не -es), щоб уникнути подвійного «s».
+
+---
+
+### Нюанс B2 — після viele/alle
+
+- Після **alle, beide, diese, manche, welche** → слабка відміна: *alle gut**en** Menschen*
+- Після **viele, einige, wenige, mehrere** → сильна відміна: *viele gut**e** Menschen* / *mit vielen gut**en** Menschen*
+
+---
+
+### Ступені порівняння
+
+| Позитив | Порівняльний (+er) | Найвищий |
+|---|---|---|
+| klein | kleiner | am kleinsten |
+| groß | größer | am größten |
+| jung | jünger | am jüngsten |
+| gut | **besser** | **am besten** |
+| viel | **mehr** | **am meisten** |
+| gern | **lieber** | **am liebsten** |
+| hoch | **höher** | **am höchsten** |
+| nah | **näher** | **am nächsten** |
+
+**Конструкції:**
+*Er ist **so groß wie** ich.* (рівність)
+*Er ist **größer als** ich.* (перевага)
+*Er ist der **größte** in der Klasse.* (найвищий, атрибут.)
+*Er läuft **am schnellsten**.* (найвищий, присл.)
+
+---
+
+# 17. ПІДРЯДНІ СПОЛУЧНИКИ + КЛАСИЧНІ ПАСТКИ
+
+### Сурядні — не змінюють порядок слів (Позиція 0)
+**Мнемоніка: ADUSO**
+
+**A**ber (але) · **D**enn (тому що) · **U**nd (і) · **S**ondern (а — після заперечення) · **O**der (або)
+
+> **aber vs sondern:** *sondern* — тільки після заперечення, коли виправляє:
+> *Er ist nicht müde, **sondern** krank.* / *Er ist müde, **aber** er arbeitet.*
+
+---
+
+### Сполучні прислівники — зворотний порядок (Позиція 1)
+
+Це **не сполучники**, а прислівники на 1-му місці → після них одразу дієслово.
+
+*deshalb / darum / deswegen:* *Ich bin krank, **deshalb bleibe** ich zu Hause.*
+*trotzdem:* *Es regnet, **trotzdem gehe** ich spazieren.*
+*außerdem:* *Er ist klug, **außerdem ist** er reich.*
+*jedoch / dennoch:* *Er ist müde, **dennoch arbeitet** er weiter.*
+
+---
+
+### Підрядні сполучники — дієслово в кінець
+
+| Сполучник | Значення | Приклад |
+|---|---|---|
+| dass | що | Ich weiß, dass du recht hast. |
+| weil / da | тому що | Ich lerne, weil ich will. |
+| obwohl | хоча | Er kommt, obwohl er müde ist. |
+| wenn | якщо/коли (теп./майб./повтор) | Wenn es regnet, bleibe ich drin. |
+| als | коли (один раз у мин.) | Als ich jung war, ... |
+| ob | чи (непр. Ja/Nein) | Ich weiß nicht, ob er kommt. |
+| nachdem | після того як | Nachdem er gegessen hatte, ... |
+| bevor / ehe | перш ніж | Bevor du gehst, ... |
+| während | поки / тоді як | Während er schlief, ... |
+| seitdem | відтоді як | Seitdem ich hier bin, ... |
+| damit | щоб (різні підмети!) | Ich gebe dir Geld, damit du kaufst. |
+| sodass | так що | Er rannte, sodass er schweißte. |
+| falls | у разі якщо | Falls es regnet, ... |
+| indem | тим, що | Er lernte, indem er las. |
+| als ob | ніби | Er tat so, als ob er schlief. |
+
+---
+
+### Пастка 1: wenn чи als?
+
+| | **als** | **wenn** |
+|---|---|---|
+| Коли | Один раз у минулому | Теп./майб. АБО повтор у мин. |
+| Приклад | *Als ich ein Kind **war**, spielte ich.* | *Wenn ich Zeit **habe**, lese ich.* |
+| | | *Immer wenn ich ihn **besuchte**, tranken wir Tee.* |
+
+---
+
+### Пастка 2: weil чи denn?
+
+| | **weil** | **denn** |
+|---|---|---|
+| Тип | підрядний сполучник | сурядний сполучник |
+| Порядок слів | дієслово в **кінець** | звичайний порядок |
+| Приклад | *Ich bleibe, weil ich krank **bin**.* | *Ich bleibe, denn ich **bin** krank.* |
+
+---
+
+### Пастка 3: damit чи um...zu?
+
+| | **damit** | **um...zu** |
+|---|---|---|
+| Підмети | **різні** | **однакові** |
+| Приклад | *Ich gebe dir Geld, **damit du** Brot kaufst.* | *Ich lerne, **um** die Prüfung zu bestehen.* |
+
+---
+
+### Парні сполучники (Zweiteilige Konjunktionen)
+
+- **entweder...oder** (або...або): *Entweder du kommst, oder ich gehe allein.*
+- **weder...noch** (ні...ні): *Er hat weder Geld noch Zeit.*
+- **sowohl...als auch** (як...так і): *Er spricht sowohl Englisch als auch Deutsch.*
+- **nicht nur...sondern auch** (не тільки...а й): *Er ist nicht nur klug, sondern auch reich.*
+- **zwar...aber** (правда...проте): *Er ist zwar müde, aber er arbeitet.*
+- **je...desto/umso** (чим...тим): *Je mehr ich lese, **desto** besser verstehe ich die Welt.*
+  Після **je** — дієслово в кінець. Після **desto** — дієслово одразу на 2-ге місце.
+
+---
+
+# 18. ЗВОРОТНІ ДІЄСЛОВА (Reflexive Verben)
+
+### sich + Akkusativ (найчастіше)
+
+sich befinden · sich beeilen · sich erinnern **an** · sich freuen **auf/über** · sich interessieren **für** · sich ärgern **über** · sich kümmern **um** · sich bewerben **um** · sich gewöhnen **an** · sich verlassen **auf** · sich eignen **für** · sich schämen · sich wundern **über**
+
+### sich + Dativ
+
+sich etw. vorstellen · sich etw. denken · sich etw. merken · sich etw. wünschen · sich etw. leisten
+
+*Ich wasche **mich**.* (Akk — мию себе)
+*Ich wasche **mir** die Hände.* (Dat — є ще Akk-об'єкт)
+
+### Зворотний займенник
+
+| | Dativ | Akkusativ |
+|---|---|---|
+| ich | mir | mich |
+| du | dir | dich |
+| er/sie/es/Sie | **sich** | **sich** |
+| wir | uns | uns |
+| ihr | euch | euch |
+
+---
+
+# 19. ІНФІНІТИВ З ZU
+
+### Коли вживається zu + Infinitiv
+
+Після дієслів: *versuchen, hoffen, vergessen, anfangen, aufhören, vorhaben, versprechen, beschließen, empfehlen, erlauben, bitten, scheinen, beginnen*
+
+Після прикм. та іменників: *Es ist wichtig, ... zu ... / Es ist Zeit, ... zu ... / Er hat keine Lust, ... zu ...*
+
+**З відокремлюваним префіксом** — zu між префіксом і дієсловом:
+*auf**zu**machen · an**zu**rufen · ein**zu**kaufen*
+
+---
+
+### Конструкції
+
+- **um...zu** (щоб): *Ich lerne viel, um die Prüfung **zu bestehen**.*
+- **ohne...zu** (не зробивши): *Er verließ das Haus, ohne ein Wort **zu sagen**.*
+- **anstatt/statt...zu** (замість): *Er spielt, anstatt Hausaufgaben **zu machen**.*
+
+---
+
+### БЕЗ zu (Infinitiv без zu)
+
+Після: модальних · lassen · hören · sehen · fühlen · spüren · helfen · lernen · gehen · bleiben (+прикм.)
+
+*Ich **sehe** ihn kommen. / Er **lässt** mich arbeiten. / Sie **lernt** schwimmen.*
+
+---
+
+# 20. GENITIV ВІДМІНОК
+
+Виражає **приналежність** (чий?). Іменники чол. і сер. роду в однині отримують -(e)s.
+
+*Das Auto **des Mannes**. / Die Tasche **der Frau**. / Trotz **des Regens**.*
+
+### Genitivus Saxonicus (для власних імен)
+*Annas Buch · Goethes Werke* — додається -s без апострофа.
+
+### Слабка відміна іменників (N-Deklination)
+
+Певна група іменників чол. роду в усіх відмінках, крім Nom. однини, отримує -(e)n.
+
+**Хто входить:**
+- На -e: *der Junge, der Kollege, der Hase, der Löwe*
+- Суфікси -ist, -ent, -ant, -at, -nom: *der Student, der Polizist, der Diplomat*
+- Окремі: *der Mensch, der Herr, der Bär, der Held, der Bauer*
+
+| | der Student | der Mensch |
+|---|---|---|
+| Nom | der Student | der Mensch |
+| Gen | des Student**en** | des Menschen |
+| Dat | dem Student**en** | dem Menschen |
+| Akk | den Student**en** | den Menschen |
+
+**Винятки з -s у Genitiv:**
+*der Name* → des Nam**ens** · *der Gedanke* → des Gedank**ens** · *das Herz* → des Herz**ens**, dem Herz**en**
+
+*Herr* — Herrn (однина) / Herren (множина)
+
+---
+
+# 21. ВІДНОСНІ РЕЧЕННЯ (Relativsätze)
+
+Рід займенника = рід **слова, яке він описує**. Відмінок = функція **в підрядному**. Дієслово — **в кінець**.
+
+| | чол. | жін. | сер. | множина |
+|---|---|---|---|---|
+| Nom | der | die | das | die |
+| Gen | **dessen** | **deren** | **dessen** | **deren** |
+| Dat | dem | der | dem | **denen** |
+| Akk | den | die | das | die |
+
+*Das ist der Computer, **der** kaputt ist.* (Nom)
+*Das ist der Computer, **den** ich gekauft habe.* (Akk)
+*Das ist der Computer, mit **dem** ich arbeite.* (Dat)
+*Das ist der Mann, **dessen** Auto gestohlen wurde.* (Gen, B2)
+*Das ist die Frau, **deren** Tochter ich kenne.* (Gen жін., B2)
+
+Після **alles, nichts, etwas, das** + ціла клауза — відносний займенник **was**:
+*Alles, **was** er sagt, ist wahr.*
+
+---
+
+# 22. KONJUNKTIV II — УМОВНИЙ СПОСІБ
+
+### Утворення
+
+| Дієслово | Konjunktiv II |
+|---|---|
+| sein | **wäre**, wärst, wäre, wären, wärt, wären |
+| haben | **hätte**, hättest, hätte, hätten, hättet, hätten |
+| werden | **würde**, würdest, würde, würden, würdet, würden |
+| können | könnte |
+| müssen | müsste |
+| dürfen | dürfte |
+| sollen | sollte |
+| wollen | wollte |
+| **Всі інші** | **würde + Infinitiv** |
+
+---
+
+### Нереальна умова — теперішнє
+
+*Wenn ich Zeit **hätte**, **würde** ich dir helfen.*
+(Якби я мав час, я б тобі допоміг — але часу немає.)
+
+---
+
+### Нереальна умова — минуле (B2 — Irrealis der Vergangenheit)
+
+Шкода про те, чого вже не змінити. Формула: **hätte/wäre + Partizip II**
+
+*Wenn ich gestern früher aufgestanden **wäre**, **hätte** ich den Zug nicht verpasst.*
+
+---
+
+### Ввічливі прохання
+
+*Könn**ten** Sie mir helfen?*
+*Ich **hätte** gern einen Kaffee.*
+***Dürfte** ich fragen?*
+*Wenn ich nur mehr Zeit **hätte**!*
+
+---
+
+### Після als ob / als wenn
+
+*Er sieht aus, als ob er krank **wäre**.*
+*Sie tat so, als **wüsste** sie nichts.*
+
+---
+
+# 23. ЧИСЛІВНИКИ (Zahlwörter)
+
+### Кількісні
+
+0 null · 1 eins/ein- · 2 zwei · 3 drei · 4 vier · 5 fünf · 6 sechs · 7 sieben · 8 acht · 9 neun · 10 zehn · 11 elf · 12 zwölf · 13 dreizehn … 19 neunzehn · 20 zwanzig · 21 einundzwanzig · 30 dreißig · 100 hundert · 1000 tausend · 1 000 000 eine Million
+
+> В розмові замість zwei кажуть **zwo** (щоб не плутати з drei по телефону).
+
+### Порядкові
+
+1–19: + **-te** (1. erste, 2. zweite, **3. dritte**, **7. siebte**, **8. achte**)
+20+: + **-ste** (20. zwanzigste, 100. hundertste)
+
+Відмінюється як прикметник: *am **ersten** Mai · der **dritte** Platz*
+
+### Час і дата
+
+**Офіційний:** *14:30 = vierzehn Uhr dreißig*
+
+**Розмовний:**
+- 1:15 → *Viertel nach eins*
+- 1:30 → **halb zwei** ⚠️ (= 1:30, НЕ 2:30!)
+- 1:45 → *Viertel vor zwei*
+
+**Дата:** *am 1. (ersten) Januar · im Jahr 2025 · in den 1990er Jahren*
+
+**Прийменники часу:**
+
+| Прийменник | Вживання | Приклад |
+|---|---|---|
+| am | дні, числа, частини дня | am Montag, am 5. Mai |
+| im | місяці, пори року | im Januar, im Sommer |
+| um | точний час | um 9 Uhr |
+| in | через (майбутнє) | in zwei Wochen |
+| vor | тому (минуле) | vor zwei Jahren |
+| seit | з (до тепер.) | seit drei Jahren |
+| bis | до | bis Freitag |
+| nach | після | nach der Schule |
+
+---
+
+# ═══════════════════════════════════════
+# 🟢 РІВЕНЬ B2 — ШЛІФУВАННЯ
+# ═══════════════════════════════════════
+
+---
+
+# 24. ПАСИВНИЙ СТАН (Passiv)
+
+### Vorgangspassiv — пасив дії (werden + Partizip II)
+
+| Час | Структура | Приклад |
+|---|---|---|
+| Präsens | wird + Part.II | Das Haus **wird gebaut**. |
+| Präteritum | wurde + Part.II | Das Haus **wurde gebaut**. |
+| Perfekt | ist + Part.II + **worden** | Das Haus **ist gebaut worden**. |
+| З модальним | Modal + Part.II + werden | Das Haus **muss gebaut werden**. |
+
+> ⚠️ **worden** (без ge-) — тільки в Perfekt пасиву. *geworden* — в активі: *Er ist Arzt **geworden**.*
+
+**Агент:**
+- Особа: *von + Dat* → *Das Haus wurde **von dem Architekten** gebaut.*
+- Засіб: *durch + Akk* → *Das Haus wurde **durch ein Erdbeben** zerstört.*
+
+**Безособовий пасив:**
+*Es wird getanzt. / Hier wird nicht geraucht.*
+
+---
+
+### Zustandspassiv — пасив стану (sein + Partizip II)
+
+Виражає **результуючий стан**, а не процес:
+*Die Tür **wird geöffnet**.* (її відчиняють — дія)
+*Die Tür **ist geöffnet**.* (двері відчинені — стан)
+
+---
+
+### Замінники пасиву — Passiv-Ersatzformen (B2)
+
+- **sich lassen + Infinitiv:** *Der Text **lässt sich** leicht **übersetzen**.* (Текст легко перекладається)
+- **sein + zu + Infinitiv:** *Der Text **ist zu übersetzen**.* (Текст має бути перекладений)
+
+---
+
+# 25. PLUSQUAMPERFEKT — ДАВНОМИНУЛИЙ ЧАС
+
+Дія, що відбулася **ДО** іншої дії в минулому.
+Формула: **hatte / war (Präteritum) + Partizip II**
+
+*Nach**dem** ich das Buch gelesen **hatte** [дія 1], **ging** ich schlafen [дія 2].*
+
+*Wir **waren** gegangen, bevor es regnete.*
+
+> Plusquamperfekt практично завжди вживається у парі з іншим минулим часом.
+
+---
+
+# 26. FUTUR I ТА II
+
+### Futur I (werden + Infinitiv)
+
+Плани, обіцянки, припущення:
+*Ich **werde** dir helfen.* (обіцянка)
+*Er **wird** jetzt wohl im Büro **sein**.* (припущення про зараз)
+
+> ⚠️ В розмові майбутнє найчастіше — **Präsens** з прислівником: *Ich komme **morgen**.*
+
+### Futur II (werden + Partizip II + haben/sein)
+
+Дія, що буде завершена до певного моменту; припущення про минуле:
+*Bis morgen **werde** ich die Arbeit gemacht **haben**.*
+*Er **wird** das Geld verloren **haben**.* (Він, напевно, загубив гроші.)
+
+---
+
+# 27. PARTIZIP — ДІЄПРИКМЕТНИК
+
+### Partizip I (теперішній)
+
+**Утворення:** Infinitiv + -d → *spielend, laufend, lesend*
+
+- Атрибутивне (відмінюється): *das spiel**ende** Kind*
+- Прислівникове: *Sie kommt lachend herein.*
+- Розгорнуте означення (письмовий стиль):
+  *Die **auf dem Tisch liegende** Zeitung...* = *Die Zeitung, die auf dem Tisch liegt...*
+
+### Partizip II — атрибутивне вживання
+
+*das gelesen**e** Buch · ein bekannt**er** Schauspieler*
+
+Розгорнуте означення (B2):
+*Der **vor zwei Jahren gebaute** Turm...* = *Der Turm, der vor zwei Jahren gebaut wurde...*
+
+---
+
+# 28. ЗАЙМЕННИКОВІ ПРИСЛІВНИКИ (Pronominaladverbien)
+
+Вживаються, коли ставимо питання або відповідаємо про **речі/поняття** з дієсловами фіксованого керування.
+
+**Питання:** wo(r)- + прийменник
+*Wor**auf** wartest du?* (На що?) · *Wo**für** interessierst du dich?*
+
+**Відповідь:** da(r)- + прийменник
+*Ich warte dar**auf**.* · *Ich interessiere mich da**für**.*
+
+> Перед голосним — **-r-**: dar**a**n, wor**a**uf, dar**ü**ber
+
+> ⚠️ **Для ЛЮДЕЙ не вживається!**
+> *Auf **wen** wartest du?* (не: Worauf?) / *Ich warte auf **ihn**.* (не: darauf)
+
+---
+
+# 29. ДІЄСЛОВА З ФІКСОВАНИМИ ПРИЙМЕННИКАМИ (Rektion)
+
+| Дієслово + прийменник | Відмінок | Значення |
+|---|---|---|
+| warten **auf** | Akk | чекати на |
+| denken **an** | Akk | думати про |
+| sich erinnern **an** | Akk | пам'ятати про |
+| sich gewöhnen **an** | Akk | звикати до |
+| glauben **an** | Akk | вірити у |
+| sich freuen **auf** | Akk | радіти (майбутнє) |
+| sich freuen **über** | Akk | радіти (факт) |
+| sich ärgern **über** | Akk | злитись через |
+| sich wundern **über** | Akk | дивуватись |
+| sich interessieren **für** | Akk | цікавитись |
+| sich bewerben **um** | Akk | претендувати на |
+| sich kümmern **um** | Akk | піклуватись про |
+| bitten **um** | Akk | просити про |
+| danken **für** | Akk | дякувати за |
+| kämpfen **für/gegen** | Akk | боротись за/проти |
+| sprechen **über** | Akk | говорити про |
+| sprechen **mit** | Dat | розмовляти з |
+| träumen **von** | Dat | мріяти про |
+| abhängen **von** | Dat | залежати від |
+| rechnen **mit** | Dat | розраховувати на |
+| leiden **an/unter** | Dat | страждати від |
+| zweifeln **an** | Dat | сумніватись в |
+| teilnehmen **an** | Dat | брати участь у |
+| gehören **zu** | Dat | належати до |
+| vergleichen **mit** | Dat | порівнювати з |
+| sich verlassen **auf** | Akk | покладатись на |
+
+---
+
+# 30. KONJUNKTIV I — НЕПРЯМА МОВА
+
+Вживається в **письмовій мові** (новини, офіційні тексти) для передачі чужих слів.
+
+| Особа | sein | haben | kommen |
+|---|---|---|---|
+| ich | sei | habe | komme |
+| du | sei(e)st | habest | kommest |
+| er/sie/es | **sei** | **habe** | **komme** |
+| wir | seien | haben* | kommen* |
+| ihr | seiet | habet | kommet |
+| sie/Sie | seien | haben* | kommen* |
+
+*\* Де Konj. I збігається з Indikativ — вживається Konj. II.*
+
+*Er sagt, er **sei** krank.*
+*Die Zeitung schreibt, der Politiker **habe** gelogen.*
+
+---
+
+# 31. НАКАЗОВИЙ СПОСІБ (Imperativ)
+
+| Форма | Утворення | machen | fahren | sein |
+|---|---|---|---|---|
+| du | Основа (+ -e опц.) | **Mach!** | **Fahr!** | **Sei!** |
+| ihr | ihr-форма без ihr | **Macht!** | **Fahrt!** | **Seid!** |
+| Sie | Infinitiv + Sie | **Machen Sie!** | **Fahren Sie!** | **Seien Sie!** |
+| wir | Infinitiv + wir | **Machen wir!** | **Fahren wir!** | **Seien wir!** |
+
+**Обов'язкове -e-:** якщо основа на -t, -d, -ig, -m/-n після приголосного:
+*Arbeit**e**! Öffn**e**! Entschuldig**e** dich!*
+
+**Сильні e→i/ie** зберігають зміну: *geben → **Gib**! · lesen → **Lies**! · sprechen → **Sprich**!*
+
+**Але умлаут НЕ зберігається:** *fahren → **Fahr**!* (не: Fähr!)
+
+---
+
+# 32. FVG — ФУНКЦІОНАЛЬНІ ДІЄСЛІВНІ КОНСТРУКЦІЇ (B2)
+
+Ознака рівня B2. Іменник + дієслово-помічник замість одного дієслова.
+
+| Конструкція | = | Просте дієслово |
+|---|---|---|
+| eine Entscheidung **treffen** | = | entscheiden |
+| einen Antrag **stellen** | = | beantragen |
+| Kritik **üben** an + Dat | = | kritisieren |
+| Abschied **nehmen** von + Dat | = | sich verabschieden |
+| in Anspruch **nehmen** | = | beanspruchen |
+| zur Verfügung **stehen** | = | verfügbar sein |
+| Einfluss **nehmen** auf + Akk | = | beeinflussen |
+| eine Rolle **spielen** | = | wichtig sein |
+| in Betracht **ziehen** | = | berücksichtigen |
+| zum Ausdruck **bringen** | = | ausdrücken |
+
+---
+
+# 33. ІНШІ ЗАЙМЕННИКИ
+
+### Вказівний (Demonstrativpronomen)
+
+**dieser/diese/dieses** відмінюється як визначений артикль з основою dies-. Так само: jener · solcher · mancher · welcher · jeder.
+
+**derselbe/dieselbe/dasselbe** (той самий) — перша частина як артикль, -selb- як прикметник.
+
+### Питальний (Interrogativpronomen)
+
+| | Nom | Gen | Dat | Akk |
+|---|---|---|---|---|
+| Особи | wer | wessen | wem | wen |
+| Речі | was | wessen | — | was |
+
+### Невизначений (Indefinitpronomen)
+
+**man** — лише Nom; Dat: einem; Akk: einen
+**jemand / niemand** — jemandes, jemandem, jemanden
+**etwas / nichts** — незмінні
+**alle / viele / einige / wenige / manche / beide / jeder** — відмінюються як прикметники
+
+---
+
+# 34. НЕВІДОКРЕМЛЮВАНІ ТА МІШАНІ ПРЕФІКСИ
+
+### Невідокремлювані — ненаголошені, без ge- в Partizip II
+
+| Префікс | Partizip II |
+|---|---|
+| be- | besuchen → **besucht** |
+| emp- | empfehlen → **empfohlen** |
+| ent- | entscheiden → **entschieden** |
+| er- | erklären → **erklärt** |
+| miss- | missverstehen → **missverstanden** |
+| ver- | vergessen → **vergessen** |
+| zer- | zerstören → **zerstört** |
+
+### Мішані (двоїсті) — залежить від наголосу
+
+| | Відокремлюваний | Невідокремлюваний |
+|---|---|---|
+| über- | **über**setzen (переправитись) | über**setzen** (перекладати) |
+| unter- | **unter**gehen (тонути) | unter**stützen** (підтримувати) |
+| durch- | **durch**fallen (провалитись) | durch**suchen** (обшукати) |
+| um- | **um**ziehen (переїхати) | um**gehen** (поводитись) |
+| wieder- | **wieder**kommen (повернутись) | wieder**holen** (повторити) |
+
+---
+
+# 35. СУБСТАНТИВАЦІЯ ТА СКЛАДНІ СЛОВА
+
+### Субстантивація
+
+Будь-яка частина мови як іменник — з великої літери, відмінюється як прикметник:
+*das Essen · das Gute · der Reisende / ein Reisender · das Deutsch*
+
+### Складні слова (Komposita)
+
+**Рід** = рід **останнього компонента**:
+*der Haus + die Aufgabe = **die** Hausaufgabe*
+
+**З'єднувальний елемент (Fugenlaut):**
+-s- (Arbeits**tag**) · -es- (Bundes**land**) · -n- (Hunde**hütte**) · нуль (Fisch**suppe**)
+
+Усі компоненти — **одне слово** без пробілів!
+
+---
+
+# 36. ФОНЕТИКА ТА ВИМОВА
+
+*(Вивчати паралельно з усім, але не обов'язково в першу чергу)*
+
+### Спеціальні символи
+
+| Буква | Звук | Правило |
+|---|---|---|
+| ä | [ɛ] | Відкрите «е» |
+| ö | [ø] | «е» з губами для «о» |
+| ü | [y] | «и» з губами для «у» |
+| ß | [s] | Після **довгого** гласного або дифтонга |
+
+**ß vs ss:** після довгого — ß *(groß, heißen)*. Після короткого — ss *(Wasser, muss).*
+
+### Дифтонги
+
+ei/ai → [aɪ] · eu/äu → [ɔɪ] · au → [aʊ]
+
+### Особливі сполучення
+
+| | Звук | Умова |
+|---|---|---|
+| ch | [x] | після a, o, u, au |
+| ch | [ç] | після i, e, ä, ö, ü, ei, eu |
+| sch | [ʃ] | завжди |
+| sp/st | [ʃp]/[ʃt] | на початку слова |
+| z/tz | [ts] | завжди |
+| w | [v] | завжди |
+| v | [f] | у нім. словах |
+| -ig | [ɪç] | в кінці слова |
+
+### Наголос
+
+- На корені (1-й склад): **Ar**beit, **Le**hrer
+- Невідокремлювані префікси ненаголошені: ver**ste**hen
+- Відокремлювані — ударні: **auf**machen
+- -ieren: studi**er**en
+
+---
+
+# 37. ВЕЛИКА ЛІТЕРА ТА ПУНКТУАЦІЯ
+
+### Велика літера
+
+- Всі **іменники** та субстантивовані слова
+- Перше слово речення
+- Ввічлива форма: *Sie, Ihr, Ihnen*
+- Власні назви: *Deutschland, Anna, Montag*
+- Але прикметники від країн — **з малої**: *ein deutsches Auto*
+
+### Кома
+
+- Між головним і підрядним: *Ich weiß**,** dass er kommt.*
+- Перед усіма підрядними сполучниками
+- Перед *aber, sondern* між головними реченнями
+- Перед *um...zu / ohne...zu / anstatt...zu* — **завжди**
+- При vocativ: ***Anna,** komm her!*
+- Перед *und/oder* між двома гол. реченнями — **необов'язкова**
+
+### Лапки
+
+Нижня відкриває, верхня закриває: **„так пишуть у Німеччині"**
+
+---
+
+# 🏁 ПІДСУМКОВІ АЛГОРИТМИ
+
+### Як побудувати речення — чекліст
+
+1. Визнач **підмет** (Wer/Was?)
+2. Постав змінюване дієслово на **2-ге місце**
+3. Обставини — у порядку **TeKaMoLo**
+4. Незмінювана частина присудка — **в кінець** (рамка)
+5. Перевір **відмінки** всіх іменників та займенників
+6. Перевір позицію **nicht**
+
+---
+
+### Як вибрати відмінок — чекліст
+
+1. Підмет? → **Nominativ**
+2. Прямий додаток (wen? was?)? → **Akkusativ**
+3. Непрямий додаток (wem?) або після дієслова-вимогача? → **Dativ**
+4. Приналежність або після Gen-прийменника? → **Genitiv**
+5. Є прийменник? → перевір його відмінок
+6. Wechselpräposition? → **Wo?** (Dat) чи **Wohin?** (Akk)?
+
+---
+
+### Як вибрати haben чи sein у Perfekt
+
+1. Рух з А в Б? → **sein**
+2. Зміна стану? → **sein**
+3. bleiben / sein / passieren / gelingen? → **sein**
+4. Все інше, особливо з Akk-об'єктом? → **haben**
+
+
+
+---
+
+# 38. ПРИСЛІВНИК (Adverb)
+
+### Часові прислівники
+
+**Конкретний момент:** jetzt · heute · gestern · morgen · vorgestern · übermorgen · damals · neulich (нещодавно)
+
+**Відносний час:** dann · danach · vorher · seitdem · inzwischen · unterdessen · schließlich · endlich · zuerst · zuletzt · bald · sofort · gleich
+
+**Частотність:** immer · meistens · oft · manchmal · selten · kaum · nie · niemals · täglich · wöchentlich · stündlich
+
+**Тривалість:** noch (ще) · schon (вже) · erst (лише/щойно) · nicht mehr (вже не) · noch nicht (ще не)
+
+---
+
+### Місцеві прислівники
+
+**Місце:** hier · dort · da · überall · nirgends · irgendwo · nebenan · oben · unten · vorn · hinten · links · rechts · innen · außen · mitten
+
+**Напрямок:**
+- **hin** (від мовця): *Geh **hin**!* / hinein · hinauf · hinunter · hinüber
+- **her** (до мовця): *Komm **her**!* / herein · herauf · herunter · herüber
+
+> *Wohin gehst du?* → *Ich gehe **dorthin**.* / *Woher kommst du?* → *Ich komme **daher**.*
+
+---
+
+### Модальні прислівники
+
+**Ступінь:** sehr · ziemlich · recht · etwas · kaum · fast · gar · völlig · total · absolut
+
+**Ствердження/сумнів:** bestimmt · sicher · wahrscheinlich · vielleicht · möglicherweise · angeblich · eigentlich · tatsächlich · wirklich
+
+**Оцінка:** leider · glücklicherweise · hoffentlich · natürlich · selbstverständlich · dummerweise · merkwürdigerweise
+
+**Заперечення/обмеження:** nur · lediglich · bloß · sogar · auch · bereits · noch · doch · ja
+
+---
+
+### Причинові прислівники
+
+deshalb / daher / darum / deswegen (тому)
+trotzdem / dennoch / gleichwohl (незважаючи)
+folglich / also (отже)
+sonst / andernfalls (інакше)
+außerdem / überdies / zudem (крім того)
+jedoch / allerdings / hingegen (проте / натомість)
+
+---
+
+# 39. БЕЗОСОБОВІ КОНСТРУКЦІЇ З «ES»
+
+### es gibt — є, існує (+ Akkusativ!)
+
+*Es gibt einen Park in der Stadt.* (Є парк у місті.)
+*Es gibt keine Probleme.* (Немає проблем.)
+*Gibt es hier eine Apotheke?*
+
+> ⚠️ **es gibt** — завжди однина, навіть якщо мова про множину!
+> *Es gibt viele Menschen.* ✅ НЕ: *Es geben viele...*
+
+---
+
+### es ist / es sind — є (конкретне місце)
+
+*Es ist ein Mann an der Tür.* (Є чоловік біля дверей — конкретна ситуація)
+*Es sind drei Studenten im Zimmer.*
+
+**Різниця:**
+- *Es **gibt** Löwen in Afrika.* (взагалі існують)
+- *Es **sind** drei Löwen im Zoo.* (конкретно тут є)
+
+---
+
+### Безособові дієслова (тільки з es)
+
+*Es **regnet**.* (Іде дощ.)
+*Es **schneit**.* (Іде сніг.)
+*Es **gelingt** mir.* (Мені вдається.)
+*Es **geht** mir gut.* (Мені добре.)
+*Es **fehlt** mir an Zeit.* (Мені бракує часу.)
+*Es **handelt sich** um...* (Йдеться про...)
+*Es **kommt darauf an**, ob...* (Залежить від того, чи...)
+*Es **liegt an** dir.* (Це залежить від тебе.)
+*Es **tut mir leid.*** (Мені шкода. — стала форма)
+
+---
+
+### Безособовий пасив з es
+
+*Es wird hier viel **gearbeitet**.* (Тут багато працюють.)
+*Es wird **getanzt**.* (Танцюють.)
+*Es **wurde** beschlossen, dass...* (Було вирішено, що...)
+
+---
+
+# 40. ПОРІВНЯЛЬНІ КОНСТРУКЦІЇ
+
+### Рівність: so...wie
+
+*Er ist **so groß wie** ich.* (Він такий самий високий, як я.)
+*Sie arbeitet **genauso** fleißig **wie** du.* (genauso = точно так само)
+*Ich trinke **doppelt so viel wie** er.* (вдвічі більше)
+
+---
+
+### Нерівність: Komparativ + als
+
+*Er ist **größer als** ich.* (Він вищий за мене.)
+*Das ist **einfacher als** ich dachte.* (Простіше, ніж я думав.)
+*Je mehr, **desto** besser.* (Чим більше, тим краще.)
+
+---
+
+### Конструкція je...desto/umso
+
+*Je **mehr** ich lerne, **desto besser** verstehe ich.*
+*Je **früher**, **umso besser**.*
+*Je **länger** ich warte, **desto** ungeduldiger **werde** ich.*
+
+> Після **je** — підрядний порядок (дієслово в кінець).
+> Після **desto/umso** — дієслово одразу на 2-ге місце (інверсія).
+
+---
+
+### Конструкція immer + Komparativ
+
+*Es wird **immer kälter**.* (Стає дедалі холодніше.)
+*Er arbeitet **immer langsamer**.* (Він працює все повільніше.)
+
+---
+
+# 41. WORTBILDUNG — СЛОВОТВІР
+
+### Суфікси для утворення іменників
+
+**Від дієслів:**
+
+| Суфікс | Рід | Значення | Приклад |
+|---|---|---|---|
+| -ung | die | процес/результат | lehren → die Lehrung (навч.) |
+| -er | der | діяч | lehren → der Lehrer |
+| -erin | die | жін. діяч | die Lehrerin |
+| -ung | die | дія | lösen → die Lösung |
+| -(t)ion | die | процес | reagieren → die Reaktion |
+
+**Від прикметників:**
+
+| Суфікс | Рід | Приклад |
+|---|---|---|
+| -heit | die | frei → die Freiheit |
+| -keit | die | möglich → die Möglichkeit |
+| -igkeit | die | neugierig → die Neugierigkeit |
+
+---
+
+### Суфікси для утворення прикметників
+
+| Суфікс | Значення | Приклад |
+|---|---|---|
+| -lich | властивий, схожий | freund → freundlich |
+| -isch | схожий (часто іноземне) | Kind → kindisch |
+| -ig | наявність ознаки | Hunger → hungrig |
+| -los | без | hoffnungslos (без надії) |
+| -voll | сповнений | hoffnungsvoll |
+| -bar | можливо зробити | essbar (їстівний) |
+| -sam | поступово, спільно | langsam (повільний) |
+| -haft | схожий, частковий | krankhaft (хворобливий) |
+
+---
+
+### Суфікси -isch vs -lich vs -ig
+
+- **-isch** — часто негативне або іноземне: *kindisch* (по-дитячому, незріло), *spanisch, typisch*
+- **-lich** — нейтральне або позитивне: *kindlich* (дитячий, природньо), *freundlich, natürlich*
+- **-ig** — наявність якості: *hungrig, mutig, ruhig*
+
+---
+
+### Найважливіші префікси для прикметників
+
+| Префікс | Значення | Приклад |
+|---|---|---|
+| un- | заперечення | unfreundlich, unmöglich |
+| in- / im- / ir- | заперечення (запозич.) | indirekt, irrational |
+| miss- | неправильне | missverstanden |
+| über- | надмірне | übermäßig |
+| unter- | недостатнє | unterdurchschnittlich |
+
+---
+
+### Префікси для дієслів
+
+| Префікс | Значення | Приклад |
+|---|---|---|
+| ver- | помилка, зміна | sich verlaufen (заблукати) |
+| er- | досягнення | erarbeiten (виробити) |
+| be- | охоплення об'єкта | bearbeiten (обробляти) |
+| zer- | знищення | zerreißen (розірвати) |
+| ent- | від'єднання | entwickeln (розвивати) |
+
+---
+
+# 42. КОНСТРУКЦІЯ З «LASSEN»
+
+Одна з найпродуктивніших конструкцій. Має 4 значення:
+
+### 1. Дозволяти (комусь щось робити)
+
+*Er **lässt** mich **fahren**.* (Він дозволяє мені їхати.)
+*Sie **lässt** die Kinder **spielen**.* (Вона дозволяє дітям гратися.)
+
+---
+
+### 2. Наказувати / замовляти (щось зробити)
+
+*Ich **lasse** das Auto **reparieren**.* (Я здаю машину в ремонт — хтось інший ремонтує.)
+*Er **ließ** sich die Haare **schneiden**.* (Він постригся — у перукаря.)
+*Ich **lasse** mir ein Haus **bauen**.* (Я замовляю будівництво будинку.)
+
+---
+
+### 3. Замінник пасиву (sich lassen + Infinitiv) — B2
+
+*Das **lässt sich** machen.* (Це можна зробити.)
+*Das **lässt sich** nicht erklären.* (Це неможливо пояснити.)
+*Der Text **lässt sich** leicht übersetzen.* (Текст легко перекладається.)
+
+---
+
+### 4. Залишати (щось у певному стані)
+
+***Lass** mich in Ruhe!* (Залиш мене у спокої!)
+*Er **ließ** das Fenster offen.* (Він залишив вікно відчиненим.)
+
+> ⚠️ lassen — **сильне дієслово**: lassen → ließ → gelassen
+> У Perfekt з другим дієсловом — **Ersatzinfinitiv**:
+> *Ich habe das Auto reparieren **lassen**.* (НЕ: gelassen)
+
+---
+
+# 43. КОНСТРУКЦІЇ З HABEN ТА SEIN + ZU
+
+### haben + zu + Infinitiv — зобов'язання/необхідність
+
+*Ich **habe** viel zu **tun**.* (Мені є багато чого робити — я зобов'язаний.)
+*Er **hat** das bis morgen zu **erledigen**.* (Він має закінчити це до завтра.)
+*Du **hast** zu **schweigen**.* (Ти маєш мовчати — наказ.)
+
+---
+
+### sein + zu + Infinitiv — можливість або необхідність (B2)
+
+*Das **ist** zu **schaffen**.* (Це можна зробити / Це здійсненно.)
+*Die Aufgabe **ist** bis Freitag zu **lösen**.* (Завдання має бути вирішене до п'ятниці.)
+*Das **ist** nicht zu **glauben**.* (В це неможливо повірити.)
+
+---
+
+# 44. ВАЖЛИВІ СТІЙКІ ВИРАЗИ (Redewendungen)
+
+### Погодження та незгода
+
+*Das stimmt.* / *Das stimmt nicht.* (Так / Не так.)
+*Ich bin dafür.* / *Ich bin dagegen.* (Я за / проти.)
+*Das kommt darauf an.* (Залежить.)
+*Ich bin der Meinung, dass...* (Я вважаю, що...)
+*Meiner Meinung nach...* (На мою думку...)
+*Einerseits... andererseits...* (З одного боку... з іншого...)
+
+---
+
+### Прохання та пропозиції
+
+*Könnten Sie bitte...?* (Чи не могли б ви...?)
+*Würden Sie bitte...?* (Будьте ласкаві...)
+*Darf ich...?* (Чи можна мені...?)
+*Dürfte ich...?* (Чи дозволите...? — ввічливіше)
+*Ich würde vorschlagen, dass...* (Я б запропонував...)
+*Was halten Sie davon?* (Як ви до цього ставитесь?)
+
+---
+
+### Виправдання та пояснення
+
+*Das liegt daran, dass...* (Причина в тому, що...)
+*Das hängt davon ab, ob...* (Залежить від того, чи...)
+*Das habe ich nicht gewusst.* (Я цього не знав.)
+*Es tut mir leid, aber...* (Шкода, але...)
+*Leider ist es so, dass...* (На жаль, справа в тому, що...)
+
+---
+
+### Часові конструкції
+
+*von...bis* (від...до): *von 9 bis 17 Uhr*
+*ab + Dat* (починаючи з): *ab nächster Woche*
+*bis zu + Dat* (аж до): *bis zu drei Stunden*
+*um...herum* (приблизно): *um 9 Uhr herum*
+*an die + Zahl* (близько): *an die 100 Menschen*
+*gegen + Akk* (близько): *gegen 20 Uhr*
+
+---
+
+# 45. ТИПОВІ ПОМИЛКИ УКРАЇНОМОВНИХ ТА РУССКОМОВНИХ
+
+### Порядок слів
+
+❌ *Heute ich gehe ins Kino.* → ✅ *Heute **gehe** ich ins Kino.*
+❌ *Ich gehe heute ins Kino nicht.* → ✅ *Ich gehe heute **nicht** ins Kino.*
+❌ *Weil ich bin krank.* → ✅ *Weil ich krank **bin**.*
+
+---
+
+### Відмінки
+
+❌ *Ich danke **dich**.* → ✅ *Ich danke **dir**.* (danken + Dat!)
+❌ *Ich helfe **dich**.* → ✅ *Ich helfe **dir**.* (helfen + Dat!)
+❌ *Er gefällt **mich**.* → ✅ *Er gefällt **mir**.* (gefallen + Dat!)
+❌ *mit **dem** Auto fahren* → ✅ так і є (mit + Dat) ✅
+
+---
+
+### Дієслово sein vs haben у Perfekt
+
+❌ *Ich habe gegangen.* → ✅ *Ich **bin** gegangen.*
+❌ *Er ist gekauft.* → ✅ *Er **hat** gekauft.*
+❌ *Sie ist geblieben haben.* → ✅ *Sie **ist** geblieben.*
+
+---
+
+### Прикметникові закінчення
+
+❌ *ein gut Mann* → ✅ *ein gut**er** Mann* (мішана — прапор на прикметнику)
+❌ *der guter Mann* → ✅ *der gut**e** Mann* (слабка — артикль несе прапор)
+❌ *mit einem neue Auto* → ✅ *mit einem neu**en** Auto* (Dat — завжди -en)
+
+---
+
+### Часи
+
+❌ *Ich bin 10 Jahre alt gewesen.* → ✅ *Ich **war** 10 Jahre alt.* (sein у розмові = Präteritum)
+❌ *Als ich komme...* → ✅ *Als ich **kam**...* (als + Präteritum/Perfekt, не Präsens!)
+❌ *Nachdem er isst...* → ✅ *Nachdem er gegessen **hatte**...* (nachdem вимагає Plusquamperfekt!)
+
+---
+
+### Прийменники
+
+❌ *Ich wohne **in** Berlin.* → ✅ так і є ✅
+❌ *Ich fahre **in** Berlin.* → ✅ *Ich fahre **nach** Berlin.* (до міста = nach)
+❌ *Ich gehe **zu** Hause.* → ✅ *Ich gehe **nach Hause**.* (додому = nach Hause)
+❌ *Ich bin **nach** Hause.* → ✅ *Ich bin **zu Hause**.* (вдома = zu Hause)
+❌ *seit **einen** Jahr* → ✅ *seit **einem** Jahr* (seit + Dat!)
+
+---
+
+### Nicht vs kein
+
+❌ *Ich habe nicht Geld.* → ✅ *Ich habe **kein** Geld.*
+❌ *Er ist kein müde.* → ✅ *Er ist **nicht** müde.*
+❌ *Das ist nicht eine gute Idee.* → ✅ *Das ist **keine** gute Idee.*
+
+---
+
+### Лексичні пастки
+
+❌ *bekommen* = получить? → ✅ bekommen = **отримувати** (НЕ ставати!)
+❌ *werden* = буде? → ✅ werden = **ставати** / допоміжне для Futur/Passiv
+❌ *sympathisch* = симпатичний (зовні)? → ✅ *sympathisch* = приємний **у спілкуванні**. Для зовнішності: *attraktiv, hübsch, gut aussehend*
+❌ *peinlich* = болісний? → ✅ *peinlich* = **незручний, сором'язливий**
+❌ *aktuell* = актуальний? → ✅ *aktuell* = **поточний, сьогоднішній** (nicht: важливий)
+
+---
+
+# 🏁 ФІНАЛЬНІ АЛГОРИТМИ — РОЗШИРЕНІ
+
+### Як побудувати речення — повний чекліст
+
+1. Визнач **підмет** (Wer/Was?)
+2. Постав змінюване дієслово на **2-ге місце** (V2-Regel)
+3. Обставини — у порядку **TeKaMoLo**
+4. Додатки: **Dativ перед Akkusativ** (якщо обидва іменники)
+5. Займенник Akk іде **перед** займенником Dat та іменником Dat
+6. Незмінювана частина присудка — **в кінець** (рамка)
+7. nicht — **перед рамкою** або **перед конкретним словом**
+8. Перевір **відмінки**
+
+---
+
+### Як вибрати відмінок
+
+1. Підмет? → **Nominativ**
+2. Прямий додаток (wen? was?)? → **Akkusativ**
+3. Непрямий додаток (wem?) або після helfen/danken/gefallen...? → **Dativ**
+4. Приналежність або після wegen/trotz/während/statt? → **Genitiv**
+5. Прийменник Akk (für/durch/ohne/um/gegen/bis)? → **Akkusativ**
+6. Прийменник Dat (mit/von/nach/aus/zu/seit/bei)? → **Dativ**
+7. Wechselpräposition (an/auf/in/über/unter...)? → **Wo? = Dat / Wohin? = Akk**
+
+---
+
+### Як вибрати haben чи sein у Perfekt
+
+1. Рух з А в Б? → **sein**
+2. Зміна стану? → **sein**
+3. bleiben / sein / passieren / gelingen / begegnen? → **sein**
+4. Перехідне дієслово (є Akk-об'єкт)? → **haben**
+5. Зворотне дієслово (sich...)? → **haben**
+6. Все інше? → **haben**
+
+---
+
+### Як вибрати часову форму
+
+| Ситуація | Форма |
+|---|---|
+| Зараз / факт / план (розмова) | **Präsens** |
+| Минуле в розмові / листі | **Perfekt** |
+| sein / haben / модальні в розмові | **Präteritum** |
+| Минуле в тексті / книзі / новинах | **Präteritum** |
+| Дія ДО іншої минулої дії | **Plusquamperfekt** |
+| Майбутній план (розмова) | **Präsens** + прислівник |
+| Обіцянка / припущення | **Futur I** |
+| Нереальна умова (теперішнє) | **Konjunktiv II** |
+| Нереальна умова (минуле) | **hätte/wäre + Partizip II** |
+
+---
+
+### Як перевірити прикметникове закінчення
+
+1. Є **der/die/das / dieser / jeder** перед прикм.? → **слабка відміна** (-e або -en)
+2. Є **ein / kein / mein...** і позиція без прапора (Nom чол., Nom/Akk сер.)? → **прикм. бере прапор** (-er / -es)
+3. Є **ein / kein / mein...** у всіх інших позиціях? → **-en**
+4. **Нема артикля**? → **сильна відміна** (прикм. = артикль)
+
+---
+
+*Довідник завершено. A1 → B2 повністю. Усі правила, алгоритми, пастки, винятки, типові помилки та конструкції рівня B2.*
+<grammar_database>

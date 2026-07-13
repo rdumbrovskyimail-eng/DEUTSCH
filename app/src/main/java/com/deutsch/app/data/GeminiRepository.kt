@@ -3,26 +3,42 @@ package com.deutsch.app.data
 import android.content.Context
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.flowOn
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
+import okhttp3.*
 import okhttp3.MediaType.Companion.toMediaType
-import okhttp3.OkHttpClient
-import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
-import org.json.JSONArray
-import org.json.JSONObject
 import timber.log.Timber
 import java.io.IOException
 import javax.inject.Inject
 import javax.inject.Singleton
 
+// --- DTO для безопасного парсинга JSON ---
+@Serializable
+data class GeminiRequest(val systemInstruction: SystemInstruction, val contents: List<Content>)
+@Serializable
+data class SystemInstruction(val parts: List<Part>)
+@Serializable
+data class Content(val role: String, val parts: List<Part>)
+@Serializable
+data class Part(val text: String)
+@Serializable
+data class GeminiResponse(val candidates: List<Candidate>? = null)
+@Serializable
+data class Candidate(val content: Content)
+
 @Singleton
 class GeminiRepository @Inject constructor(
     private val client: OkHttpClient,
-    @ApplicationContext private val context: Context // Контекст для доступа к assets
+    @ApplicationContext private val context: Context
 ) {
-    // Лениво читаем базу грамматики один раз при первом обращении
+    private val json = Json { ignoreUnknownKeys = true }
+
     private val grammarRulesA1B2: String by lazy {
         try {
             context.assets.open("grammar_rules.md").bufferedReader().use { it.readText() }
@@ -32,65 +48,70 @@ class GeminiRepository @Inject constructor(
         }
     }
 
-    fun analyzeTextStream(inputText: String, apiKey: String): Flow<String> = flow {
+    fun analyzeTextStream(inputText: String, apiKey: String): Flow<String> = callbackFlow {
         if (inputText.isBlank()) {
-            emit("Начните вводить текст на немецком...")
-            return@flow
+            trySend("Начните вводить текст на немецком...")
+            close()
+            return@callbackFlow
         }
 
         val url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:streamGenerateContent?alt=sse&key=$apiKey"
 
-        val jsonBody = JSONObject().apply {
-            put("systemInstruction", JSONObject().apply {
-                put("parts", JSONArray().put(JSONObject().apply { put("text", grammarRulesA1B2) }))
-            })
-            put("contents", JSONArray().put(JSONObject().apply {
-                put("role", "user")
-                put("parts", JSONArray().put(JSONObject().apply { put("text", inputText) }))
-            }))
-        }
+        val requestBody = GeminiRequest(
+            systemInstruction = SystemInstruction(listOf(Part(grammarRulesA1B2))),
+            contents = listOf(Content("user", listOf(Part(inputText))))
+        )
 
         val request = Request.Builder()
             .url(url)
-            .post(jsonBody.toString().toRequestBody("application/json".toMediaType()))
+            .post(json.encodeToString(requestBody).toRequestBody("application/json".toMediaType()))
             .build()
 
-        try {
-            client.newCall(request).execute().use { response ->
-                if (!response.isSuccessful) {
-                    emit("⚠️ Ошибка API: ${response.code} ${response.message}")
-                    return@use
+        val call = client.newCall(request)
+
+        call.enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                if (!call.isCanceled()) {
+                    Timber.e(e, "Ошибка сети")
+                    trySend("⚠️ Ошибка сети. Проверьте подключение.")
                 }
+                close(e)
+            }
 
-                val source = response.body?.source() ?: return@use
-                var fullResponse = ""
+            override fun onResponse(call: Call, response: Response) {
+                response.use {
+                    if (!response.isSuccessful) {
+                        trySend("⚠️ Ошибка API: ${response.code} ${response.message}")
+                        close()
+                        return
+                    }
 
-                // Читаем Server-Sent Events (SSE)
-                while (!source.exhausted()) {
-                    val line = source.readUtf8Line() ?: break
-                    if (line.startsWith("data: ")) {
-                        val data = line.substring(6)
-                        if (data == "[DONE]") break
-                        try {
-                            val chunkJson = JSONObject(data)
-                            val candidates = chunkJson.optJSONArray("candidates")
-                            if (candidates != null && candidates.length() > 0) {
-                                val parts = candidates.getJSONObject(0)
-                                    .getJSONObject("content")
-                                    .getJSONArray("parts")
-                                val textChunk = parts.getJSONObject(0).getString("text")
+                    val source = response.body?.source() ?: return
+                    var fullResponse = ""
+
+                    try {
+                        while (!source.exhausted()) {
+                            val line = source.readUtf8Line() ?: break
+                            if (line.startsWith("data: ")) {
+                                val data = line.substring(6)
+                                if (data == "[DONE]") break
+                                
+                                val chunkJson = json.decodeFromString<GeminiResponse>(data)
+                                val textChunk = chunkJson.candidates?.firstOrNull()?.content?.parts?.firstOrNull()?.text ?: ""
                                 fullResponse += textChunk
-                                emit(fullResponse) // Мгновенно отправляем кусок текста в UI
+                                trySend(fullResponse)
                             }
-                        } catch (e: Exception) {
-                            Timber.e(e, "Ошибка парсинга JSON")
                         }
+                    } catch (e: Exception) {
+                        Timber.e(e, "Ошибка парсинга потока")
+                    } finally {
+                        close()
                     }
                 }
             }
-        } catch (e: IOException) {
-            Timber.e(e, "Ошибка сети")
-            emit("⚠️ Ошибка сети. Проверьте подключение.")
-        }
+        })
+
+        // При отмене Flow (пользователь продолжил печатать) - отменяем сетевой запрос
+        awaitClose { call.cancel() }
     }.flowOn(Dispatchers.IO)
 }

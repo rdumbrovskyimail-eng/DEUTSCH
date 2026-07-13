@@ -18,17 +18,6 @@ android {
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
-
-        // Читаем ключ из local.properties (для локальной сборки) или из ENV (для GitHub Actions)
-        val localProperties = java.util.Properties()
-        val localPropertiesFile = rootProject.file("local.properties")
-        if (localPropertiesFile.exists()) {
-            localProperties.load(java.io.FileInputStream(localPropertiesFile))
-        }
-        val apiKey = System.getenv("GEMINI_API_KEY") ?: localProperties.getProperty("GEMINI_API_KEY") ?: "MISSING_API_KEY"
-        
-        // Генерируем поле в BuildConfig
-        buildConfigField("String", "GEMINI_API_KEY", "\"$apiKey\"")
     }
 
     buildFeatures {
@@ -125,8 +114,8 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2")
 
-    // DataStore
-    implementation("androidx.datastore:datastore:1.2.1")
+    // DataStore Preferences
+    implementation("androidx.datastore:datastore-preferences:1.1.1")
 
     // Logging
     implementation("com.jakewharton.timber:timber:5.0.1")

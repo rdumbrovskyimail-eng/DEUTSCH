@@ -139,8 +139,10 @@ fun AnalyzerScreen(
                         MarkdownText(
                             markdown = reportText,
                             modifier = Modifier.fillMaxSize().verticalScroll(scrollState),
-                            color = Color(0xFF3A3423),
-                            fontSize = 16.sp
+                            style = androidx.compose.ui.text.TextStyle(
+                                color = Color(0xFF3A3423),
+                                fontSize = 16.sp
+                            )
                         )
                     }
                 }

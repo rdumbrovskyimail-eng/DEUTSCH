@@ -18,14 +18,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MaterialTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Box(
-                        modifier = Modifier.fillMaxSize(),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Text(text = "Hello, Deutsch!")
-                    }
-                }
+                AnalyzerScreen()
             }
         }
     }

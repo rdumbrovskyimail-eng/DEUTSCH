@@ -27,9 +27,7 @@ class AnalyzerViewModel @Inject constructor(
     private val repository: GeminiRepository
 ) : ViewModel() {
 
-    // ВАЖНО: Ключ нужно брать из BuildConfig/Local.properties
-    // Временно заглушка. Настрой безопасную передачу ключа!
-    private val apiKey = "ТВОЙ_GEMINI_API_KEY_ЗДЕСЬ" 
+    private val apiKey = com.deutsch.app.BuildConfig.GEMINI_API_KEY
 
     private val _inputText = MutableStateFlow("")
     val inputText: StateFlow<String> = _inputText.asStateFlow()

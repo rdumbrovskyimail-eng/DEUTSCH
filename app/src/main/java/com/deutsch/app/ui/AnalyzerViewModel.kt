@@ -32,8 +32,8 @@ class AnalyzerViewModel @Inject constructor(
     val analysisReport: StateFlow<String> = _inputText
         .debounce(600)
         .distinctUntilChanged()
-        .onEach { _isAnalyzing.value = true }
         .flatMapLatest { text ->
+            _isAnalyzing.value = true
             val currentKey = apiKey.value
             
             if (currentKey.isBlank()) {

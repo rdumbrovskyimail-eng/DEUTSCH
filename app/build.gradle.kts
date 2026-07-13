@@ -1,4 +1,4 @@
-// Путь: app/build.gradle.kts  (build-speed optimized, Cloud Gemini Live — без офлайн-ASR)
+// Путь: app/build.gradle.kts
 // ═══════════════════════════════════════════════════════════
 plugins {
     id("com.android.application")

@@ -3,31 +3,24 @@ package com.deutsch.app.ui
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.deutsch.app.data.GeminiRepository
+import com.deutsch.app.data.SettingsRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.SharingStarted
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.catch
-import kotlinx.coroutines.flow.debounce
-import kotlinx.coroutines.flow.distinctUntilChanged
-import kotlinx.coroutines.flow.flatMapLatest
-import kotlinx.coroutines.flow.flowOf
-import kotlinx.coroutines.flow.onEach
-import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @OptIn(FlowPreview::class, ExperimentalCoroutinesApi::class)
 @HiltViewModel
 class AnalyzerViewModel @Inject constructor(
-    private val repository: GeminiRepository
+    private val repository: GeminiRepository,
+    private val settingsRepository: SettingsRepository
 ) : ViewModel() {
 
-    private val apiKey = com.deutsch.app.BuildConfig.GEMINI_API_KEY
+    // Реактивно получаем ключ из настроек
+    val apiKey: StateFlow<String> = settingsRepository.apiKeyFlow
+        .stateIn(viewModelScope, SharingStarted.Eagerly, "")
 
     private val _inputText = MutableStateFlow("")
     val inputText: StateFlow<String> = _inputText.asStateFlow()
@@ -37,17 +30,27 @@ class AnalyzerViewModel @Inject constructor(
 
     // Главный пайплайн анализатора
     val analysisReport: StateFlow<String> = _inputText
-        .debounce(600) // Ждем 600мс после последнего нажатия клавиши
+        .debounce(600)
         .distinctUntilChanged()
         .onEach { _isAnalyzing.value = true }
         .flatMapLatest { text ->
-            if (text.isBlank()) {
+            val currentKey = apiKey.value
+            
+            if (currentKey.isBlank()) {
+                _isAnalyzing.value = false
+                flowOf("⚠️ **API-ключ не найден!**\n\nПожалуйста, нажмите на иконку шестеренки в правом верхнем углу и введите ваш ключ Gemini API.")
+            } else if (text.isBlank()) {
                 _isAnalyzing.value = false
                 flowOf("Напишите что-нибудь по-немецки, и я мгновенно это проанализирую...")
             } else {
-                repository.analyzeTextStream(text, apiKey)
-                    .catch { emit("Произошла непредвиденная ошибка при анализе.") }
-                    .onEach { _isAnalyzing.value = false }
+                flow {
+                    emit("⏳ *Анализирую...*") // Сброс старого текста
+                    repository.analyzeTextStream(text, currentKey).collect { chunk ->
+                        emit(chunk)
+                    }
+                }
+                .catch { emit("⚠️ Произошла ошибка сети или неверный API-ключ.") }
+                .onCompletion { _isAnalyzing.value = false }
             }
         }
         .stateIn(
@@ -58,13 +61,14 @@ class AnalyzerViewModel @Inject constructor(
 
     fun onTextChanged(newText: String) {
         _inputText.value = newText
-        if (newText.isNotBlank()) {
+        if (newText.isNotBlank() && apiKey.value.isNotBlank()) {
             _isAnalyzing.value = true
         }
     }
-    
-    // Сюда мы передадим твою базу грамматики
-    fun loadGrammarRules(rules: String) {
-        repository.updateGrammarDatabase(rules)
+
+    fun saveApiKey(key: String) {
+        viewModelScope.launch {
+            settingsRepository.saveApiKey(key.trim())
+        }
     }
 }

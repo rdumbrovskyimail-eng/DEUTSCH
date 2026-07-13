@@ -35,7 +35,7 @@ data class Candidate(val content: Content)
 @Singleton
 class GeminiRepository @Inject constructor(
     private val client: OkHttpClient,
-    @ApplicationContext private val context: Context
+    @param:ApplicationContext private val context: Context
 ) {
     private val json = Json { ignoreUnknownKeys = true }
 

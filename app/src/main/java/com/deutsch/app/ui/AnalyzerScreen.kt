@@ -76,8 +76,9 @@ fun AnalyzerScreen(
                     .fillMaxWidth()
                     .weight(0.35f)
                     .clip(RoundedCornerShape(16.dp)),
-                colors = TextFieldDefaults.outlinedTextFieldColors(
-                    containerColor = colorResource(id = R.color.surface_controls),
+                colors = OutlinedTextFieldDefaults.colors(
+                    focusedContainerColor = colorResource(id = R.color.surface_controls),
+                    unfocusedContainerColor = colorResource(id = R.color.surface_controls),
                     unfocusedBorderColor = colorResource(id = R.color.input_stroke_color),
                     focusedBorderColor = colorResource(id = R.color.accent_blue)
                 ),
@@ -124,12 +125,24 @@ fun AnalyzerScreen(
             ) {
                 Box(modifier = Modifier.fillMaxSize().padding(16.dp)) {
                     val scrollState = rememberScrollState()
-                    MarkdownText(
-                        markdown = reportText,
-                        modifier = Modifier.fillMaxSize().verticalScroll(scrollState),
-                        color = Color(0xFF3A3423),
-                        fontSize = 16.sp
-                    )
+                    
+                    // ОПТИМИЗАЦИЯ: Во время стриминга используем обычный Text (не лагает), 
+                    // а после завершения рендерим красивый Markdown.
+                    if (isAnalyzing) {
+                        Text(
+                            text = reportText,
+                            modifier = Modifier.fillMaxSize().verticalScroll(scrollState),
+                            color = Color(0xFF3A3423),
+                            fontSize = 16.sp
+                        )
+                    } else {
+                        MarkdownText(
+                            markdown = reportText,
+                            modifier = Modifier.fillMaxSize().verticalScroll(scrollState),
+                            color = Color(0xFF3A3423),
+                            fontSize = 16.sp
+                        )
+                    }
                 }
             }
         }

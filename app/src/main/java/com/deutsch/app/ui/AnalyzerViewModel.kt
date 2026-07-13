@@ -63,6 +63,8 @@ class AnalyzerViewModel @Inject constructor(
         _inputText.value = newText
         if (newText.isNotBlank() && apiKey.value.isNotBlank()) {
             _isAnalyzing.value = true
+        } else {
+            _isAnalyzing.value = false
         }
     }
 
